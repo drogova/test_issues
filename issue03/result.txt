@@ -1,0 +1,18 @@
+~/PycharmProjects/test_issues
+(test_issue01) ❯ python -m unittest issue03.TestOneHotEncoder
+
+...E
+======================================================================
+ERROR: test_no_argument (one_hot_encoder.TestOneHotEncoder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dyurogova/PycharmProjects/test_issues/one_hot_encoder.py", line 17, in test_no_argument
+    fit_transform()
+  File "/Users/dyurogova/PycharmProjects/test_issues/one_hot_encoder.py", line 31, in fit_transform
+    raise TypeError('expected at least 1 arguments, got 0')
+TypeError: expected at least 1 arguments, got 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=1)

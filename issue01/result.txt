@@ -1,0 +1,52 @@
+~/PycharmProjects/test_issues
+(test_issue01) ❯ python -m doctest -v -o IGNORE_EXCEPTION_DETAIL  issue01.py
+
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode(' ')
+Expecting:
+    ' '
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode(', ')
+Expecting:
+    '--..-- '
+**********************************************************************
+File "/Users/dyurogova/PycharmProjects/test_issues/issue01.py", line 39, in issue01.encode
+Failed example:
+    encode(', ')
+Expected:
+    '--..-- '
+Got:
+    '--..--  '
+Trying:
+    encode(12345) # doctest: +ELLIPSIS
+Expecting:
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+ok
+Trying:
+    encode('сос')
+Expecting:
+    Traceback (most recent call last):
+        ...
+    KeyError:
+ok
+1 items had no tests:
+    issue01
+**********************************************************************
+1 items had failures:
+   1 of   6 in issue01.encode
+6 tests in 2 items.
+5 passed and 1 failed.
+***Test Failed*** 1 failures.
